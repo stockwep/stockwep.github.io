@@ -1,0 +1,22 @@
+<header class="site-header" role="banner">
+
+  <div class="wrapper">
+    <a class="site-title" href="{{ "/" | relative_url}}">{{ site.title | escape }}</a>
+
+    <nav class="site-nav">
+      {% comment %}
+      <div class="trigger">
+        {% for my_page in site.pages %}
+          {% if my_page.title %}
+          <a class="page-link" href="{{ my_page.url | relative_url }}">{{ my_page.title | escape }}</a>
+          {% endif %}
+        {% endfor %}
+      </div>
+      {% endcomment %}
+      {% if site.github_username %}{% include icon-github.html username=site.github_username %}{% endif %}
+      {% if site.twitter_username %}{% include icon-twitter.html username=site.twitter_username %}{% endif %}
+    </nav>
+
+  </div>
+{% comment %}<p class="tag-line">Geek. Developer. Consultant.</p>{% endcomment %}
+</header>

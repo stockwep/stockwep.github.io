@@ -1,0 +1,21 @@
+---
+layout: default
+---
+
+<h1>{{ page.title }}</h1>
+
+{% assign groupedPosts = site.tags[page.title] | group_by_exp:"post", "post.date | truncate: 3, \"\"" %}
+
+{{ groupedPosts | inspect }}
+
+{% for period in groupedPosts %}
+  {{ period.name }}
+{% endfor %}
+
+<ul>
+{% for post in site.tags[page.title] %}
+  <li>
+    <a href="{{ post.url }}">{{ post.title }}</a> {{ post.date | date: "%B %d, %Y" }}
+  </li>
+{% endfor %}
+</ul>
