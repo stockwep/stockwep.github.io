@@ -1,9 +1,13 @@
 ---
 layout: post
 title:  "Handling SPA configuration"
-date:   2017-02-17 00:00:00 +0000
+date:   2017-02-18 00:00:00 +0000
 categories: ALM
-tags: SPA, continuos integration, vsts 
+tags: 
+    - single page application
+    - continuous integration
+    - vsts
+    - webpack 
 ---
 
 I do a lot of work with customers building single page applications with
